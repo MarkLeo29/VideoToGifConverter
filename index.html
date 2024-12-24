@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video to GIF Converter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div>
@@ -15,6 +16,8 @@
         <h2>Resulting GIF</h2>
         <img id="gifOutput" alt="Resulting GIF will be shown here">
     </div>
+    <div id="loadingIndicator" class="hidden">Loading...</div>
+    
     <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.10.1/dist/ffmpeg.min.js"></script>
     <script src="script.js"></script>
 </body>
