@@ -9,7 +9,11 @@ async function convertVideoToGif() {
     }
 
     const gifOutput = document.getElementById('gifOutput');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+
     gifOutput.src = ''; // Clear any previous output
+    loadingIndicator.classList.remove('hidden');
+    loadingIndicator.classList.add('visible');
 
     await ffmpeg.load();
 
@@ -26,4 +30,7 @@ async function convertVideoToGif() {
 
     // Display the resulting GIF
     gifOutput.src = gifUrl;
+
+    loadingIndicator.classList.remove('visible');
+    loadingIndicator.classList.add('hidden');
 }
